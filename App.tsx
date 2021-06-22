@@ -13,7 +13,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [temp, setTemp] = useState(0)
 
-  const getWeather = async (latitude, longitude) => {
+  const getWeather = async (latitude: number, longitude: number) => {
     const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`)
     setTemp(data.main.temp)
     console.log(data)
