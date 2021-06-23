@@ -19,7 +19,6 @@ export default function App() {
       main: { temp }, weather} } = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`)
     setTemp(temp)
     setCondition(weather[0].main)
-    console.log(weather)
   }
 
   const getLocation = async () => {
